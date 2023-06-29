@@ -50,16 +50,22 @@ var started = false;
 
 
 
+    $(document).on("keydown touchstart", function(event) {
+      if (!started) {
+        nextSequence();
+        started = true;
+      }
+    });
 
 
-$(document).keydown(function(){
-  if (!started) {
-    nextSequence();
 
-    started = true;
-  }
-
-});
+// $(document).keydown(function(){
+//   if (!started) {
+//     nextSequence();
+//
+//     started = true;
+//   }
+// });
 
 
 function checkAnswer(currentLevel) {
